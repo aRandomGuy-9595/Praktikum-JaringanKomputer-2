@@ -1,0 +1,83 @@
+\section{Langkah-Langkah Percobaan}
+Di percobaan Firewall dan NAT, pertama tama kita reset router untuk mencegah konflik. Selanjutnya kita melakukan konfigurasi DHCP Client, NAT, dan melakukan uji ping ke IP Google pada PC1. Lalu kami mengonfigurasi firewall dan blokir IMCP. Selanjutnya kita blokir situs speedtest.net, lalu mengatur PC2 sebagai Bridge. Dan kita coba ping IP Google dan website speedtest pada PC2. Lalu semua blokir dimatikan dan ping IP Google serta website pada PC2 dicoba kembali.
+
+\section{Analisis Hasil Percobaan}
+Pada percobaan ini, kita melakukan pengaturan firewall dan NAT. Setelah itu, kita memblokir IP 8.8.8.8 dan website speedtest. Setelah diblokir, saat PC2 mencoba ping 8.8.8.8 request timed out, dan website speedtest loading secara indefinite. Lalu, setelah semua blokir dibuka, ping 8.8.8.8 berhasil dan website speedtest bisa dibuka seperti biasa.
+
+\section{Hasil Tugas Modul}
+\begin{enumerate}
+	\item Gambar 5.2.1 adalah jaringan yang telah dibentuk pada aplikasi Cisco Packet Tracer. Pada gambar 5.2.2 adalah NAT yang sudah setup, namun firewallnya belum. Selanjutnya dibuatlah firewall yang hanya mengizinkan PC0 mengakses server, namun masing2 PC masih bisa saling berkomunikasi. Gambar 5.2.3 adalah hasil ping setelah firewall diterapkan.
+\end{enumerate}
+
+\section{Kesimpulan}
+Bahwa kita dapat menghalang akses satu perangkat mengakses IP/situs tertentu menggunakan firewall, baik itu network masuk maupun keluar. NAT juga memungkinkan kita menggunakan 1 IP addres publik untuk banyak perangkat.
+
+\section{Lampiran}
+\subsection{Dokumentasi saat praktikum}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{image.png}
+    \caption{5.1.1 DHCP Setting PC1}
+    \label{fig:enter-label}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{image1.png}
+    \caption{5.1.2 DHCP Setting router MikroTik}
+    \label{fig:enter-label}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{imagwwe.png}
+    \caption{5.1.3 Konfigurasi NAT}
+    \label{fig:enter-label}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{imag88e.png}
+    \caption{5.1.4 Test Ping 8.8.8.8}
+    \label{fig:enter-label}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{ddada.png}
+    \caption{5.1.5 Content Blocking}
+    \label{fig:enter-label}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{imar r rge.png}
+    \caption{5.1.6 Bridge}
+    \label{fig:enter-label}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{imagryoe.png}
+    \caption{5.1.7 8.8.8.8 RTO}
+    \label{fig:enter-label}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{imatopolhige.png}
+    \caption{5.2.1 Topologi Jaringan}
+    \label{fig:enter-label}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{fffffff.png}
+    \caption{5.2.2 NAT setup berhasil}
+    \label{fig:enter-label}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{ddddd.png}
+    \caption{5.2.3 Setelah firewall}
+    \label{fig:enter-label}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{fffff.png}
+    \caption{5.2.4 ping antar PC masih bisa meski firewall aktif}
+    \label{fig:enter-label}
+\end{figure}
+
