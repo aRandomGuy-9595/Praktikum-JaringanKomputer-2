@@ -1,0 +1,102 @@
+\section{Langkah-Langkah Percobaan}
+Pada percobaan pertama, pertama - tama router direset untuk menghindari konflik dari praktikum sebelumnya. Selanjutnya ether3 dikonfigurasi menjadi DHCP client, dan opsi Use Peer DNS dan Use Peer NTP diaktifkan. Lalu di ether1 ditambahkan IP Address statis 192.168.10.2/24, dan gateway untuk DHCP diset ke 192.168.10.2. Lalu mode ARP diubah menjadi proxy-arp. Lalu PPTP server diaktifkan, dan kredensial login diset dengan username: mahasiswa, password: praktikum123, local address: 192.168.10.2, dan remote address: 192.168.10.5. Selanjutnya di laptop windoes ditambahkan lah koneksi vpn server dengan data dan kredensial yang sama seperti tadi. Dan dieksekusi perintah ipconfig di cmd laptop serta ping dari laptop ke gateway tunnel dan ke laptop lain dalam satu jaringan lokal. Selantjutnya pada percobaan kedua konfigurasi quality of service dengan simple queue, kita tidak mereset router sisa percobaan pertama, dan kita langsung memasukkan IP 192.168.10.0/24 pada bagian Simple Queues. Dan max traffic diset ke 1 Mbps. Lalu dilakukan uji speed test.
+
+
+\section{Analisis Hasil Percobaan}
+Pada percobaan pertama, setelah PPTP server diaktifkan pada router, dan kredensial dibuat, dan koneksi VPN berhasil di-establish, kita mencoba melakukan ping dari laptop ke gateway dan ke laptop lain di LAN. Ping berhasil, menunjukkan bahwa terowongan VPN sudah berhasil dibuat dan bekerja. Dan pada percobaan quality of service dengan simple queue, setelah menargetkan seluruh subnet LAN dan membatasi max bandwith ke 1Mbps, telrihat bahwa speedtest tidak melebihi 1Mbps, karena sudah di limit bandwith nya oleh simple queue. 
+
+\section{Hasil Tugas Modul}
+\begin{enumerate}
+	\item Jaringan telah berhasil di establish dan ping antar PC sudah berhasil seperti terlampir. Dalam jaringan tersebut, PPTP berfungsi untuk membangun sebuah terowongan virtual yang aman dan privat melalui sebuah jaringan. Protokol ini bekerja dengan cara "membungkus" paket data dari PC1 sehingga dapat dikirimkan secara aman ke PC2. Dengan adanya terowongan VPN ini, kedua jaringan yang secara fisik terpisah dapat berkomunikasi seolah-olah terhubung langsung dalam satu jaringan privat, sehingga PC1 bisa ping ke PC2 dengan aman.
+\end{enumerate}
+
+\section{Kesimpulan}
+Setelah melakukan modul praktikum kali ini, dapat ditarik beberapa kesimpulan. Pertama, server PPTP pada VPN bisa berfungsi sebagai terowongan jaringan, terutama dalam situasi remote access, sehingga perangkat luar bisa mengakses jaringan lokal secara aman tanpa kendala. Dan dengan implemenetasi quality of service dengan simple queue, kita bisa membatasi bandwith yang lewat pada suatu jaringan.  
+
+\section{Lampiran}
+\subsection{Dokumentasi saat praktikum}
+\subsection{Lampiran Tugas Modul}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{image.png}
+    \caption{5.1.1 Konfirgurasi PPTP Server untuk VPN}
+    \label{fig:enter-label}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{dddd.png}
+    \caption{5.1.2 Konfigurasi DHCP Server}
+    \label{fig:enter-label}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{ffffff.png}
+    \caption{5.1.3 Konfigurasi local IP}
+    \label{fig:enter-label}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{ddddddd.png}
+    \caption{5.1.4 Konfigurasi Firewall NAT}
+    \label{fig:enter-label}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{f.png}
+    \caption{5.1.5 Config DHCP Client}
+    \label{fig:enter-label}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{t.png}
+    \caption{5.1.6 Config VPN PC1}
+    \label{fig:enter-label}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{q.png}
+    \caption{5.1.7 IPConfig PC1}
+    \label{fig:enter-label}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{g.png}
+    \caption{5.1.8 Ping Test}
+    \label{fig:enter-label}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{p.png}
+    \caption{5.1.9 Speedtest Queue Off}
+    \label{fig:enter-label}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{l.png}
+    \caption{5.1.10 Speedtest Queue On}
+    \label{fig:enter-label}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{m.png}
+    \caption{5.1.11 Dokumentasi Praktikum}
+    \label{fig:enter-label}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{ll.png}
+    \caption{5.2.1 Topologi Jaringan}
+    \label{fig:enter-label}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{lt.png}
+    \caption{5.2.2 Ping PC1 ke PC2}
+    \label{fig:enter-label}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{b.png}
+    \caption{5.2.3 Ping PC2 ke PC1}
+    \label{fig:enter-label}
+\end{figure}
